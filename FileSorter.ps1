@@ -18,7 +18,6 @@ Get-ChildItem -Path $sourcePath | Select Extension | Sort Extension | Get-Unique
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".exe"} | Move-Item -Destination $destPath\Apps
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".msi"} | Move-Item -Destination $destPath\Apps
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".docx"} | Move-Item -Destination $destPath\Docs
-Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".docx"} | Move-Item -Destination $destPath\Docs
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".pptx"} | Move-Item -Destination $destPath\Docs
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".xlsx"} | Move-Item -Destination $destPath\Docs
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".jpg"} | copy-Item -Destination C:\users\herobali\Pictures\
@@ -36,3 +35,5 @@ Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".ics"} | Move-
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".xml"} | Move-Item -Destination $destPath\Etc
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".html"} | Move-Item -Destination $destPath\Etc
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".encrypted"} | Move-Item -Destination $destPath\Etc
+Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".rdp"} | Move-Item -Destination $destPath\Etc
+Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".xml"} | Move-Item -Destination $destPath\Etc
