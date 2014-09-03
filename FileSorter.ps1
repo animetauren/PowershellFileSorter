@@ -16,6 +16,8 @@ $filePaths | % {
 Get-ChildItem -Path $sourcePath | Select Extension | Sort Extension | Get-Unique  -AsString
 
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".exe"} | Move-Item -Destination $destPath\Apps
+Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".msi"} | Move-Item -Destination $destPath\Apps
+Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".docx"} | Move-Item -Destination $destPath\Docs
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".docx"} | Move-Item -Destination $destPath\Docs
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".pptx"} | Move-Item -Destination $destPath\Docs
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".xlsx"} | Move-Item -Destination $destPath\Docs
