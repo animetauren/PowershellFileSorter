@@ -30,7 +30,7 @@ Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".txt"} | Move-
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".zip"} | Move-Item -Destination $destPath\Archive
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".tar"} | Move-Item -Destination $destPath\Archive
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".vbs"} | Move-Item -Destination $destPath\Etc
-Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".kdb"} | Move-Item -Destination $destPath\Etc
+Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".kdbx"} | Move-Item -Destination $destPath\Etc
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".kdb"} | Move-Item -Destination $destPath\Etc
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".ics"} | Move-Item -Destination $destPath\Etc
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".xml"} | Move-Item -Destination $destPath\Etc
