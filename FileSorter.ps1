@@ -36,4 +36,3 @@ Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".xml"} | Move-
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".html"} | Move-Item -Destination $destPath\Etc
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".encrypted"} | Move-Item -Destination $destPath\Etc
 Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".rdp"} | Move-Item -Destination $destPath\Etc
-Get-ChildItem -path $sourcePath | where-object {$_.Extension -eq ".xml"} | Move-Item -Destination $destPath\Etc
